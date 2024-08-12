@@ -42,25 +42,12 @@ h2 {
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-.projects-container {
-  display: flex;
-  overflow-x: scroll; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Snap to elements when scrolling */
-  gap: 20px; /* Optional: adds space between projects */
-  padding: 10px;
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
-}
 
 .projects-container::-webkit-scrollbar {
   display: none; /* Hide scrollbar in WebKit browsers */
 }
 .projects-container {
-  display: flex; /* Arrange children in a row */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Enable snapping to elements */
-  gap: 20px; /* Add space between projects */
-  padding: 10px;
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+   /* Hide scrollbar in Firefox */
 }
 
 .projects-container::-webkit-scrollbar {
@@ -68,8 +55,15 @@ h2 {
 }
 
 .project {
-  flex: 0 0 auto; /* Prevent the project from shrinking or growing */
-  width: 300px; /* Fixed width for each project */
+  
+  flex: 0 0;
+  display: flex; /* Arrange children in a row */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable snapping to elements */
+  gap: 20px; /* Add space between projects */
+  padding: 10px;
+  scrollbar-width: none; /* Prevent the project from shrinking or growing */
+  width:auto; /* Fixed width for each project */
   padding: 20px;
   border-radius: 7px solid grey;
   scroll-snap-align: start; /* Snap to the start of the project */
