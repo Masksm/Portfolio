@@ -54,13 +54,25 @@ h2 {
 .projects-container::-webkit-scrollbar {
   display: none; /* Hide scrollbar in WebKit browsers */
 }
+.projects-container {
+  display: flex; /* Arrange children in a row */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable snapping to elements */
+  gap: 20px; /* Add space between projects */
+  padding: 10px;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
 
 .project {
-  flex: 0 0 auto; /* Prevent shrinking */
-  width: 300px; /* Set a fixed width for each project */
+  flex: 0 0 auto; /* Prevent the project from shrinking or growing */
+  width: 300px; /* Fixed width for each project */
   padding: 20px;
   border: 2px solid grey;
-  scroll-snap-align: start; /* Align the project at the start of the container when snapped */
+  scroll-snap-align: start; /* Snap to the start of the project */
   background-color: #f0f0f0;
   white-space: normal; /* Allow text to wrap normally */
 }
