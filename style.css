@@ -45,12 +45,16 @@ h2 {
 
 .project {
   margin-bottom: 20px;
+ 
+  .project {
+  margin-bottom: 20px;
   padding: 8px;
-  border:2px solid grey ;
-  white-space: normal;
-  overflow-x: hidden;
+  border: 2px solid grey;
+  white-space: normal; /* Allow text to wrap normally */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  direction: rtl; /* Set the scroll direction from right to left */
+  overflow-y: hidden; /* Hide vertical scroll */
 }
-  
 .project a{
   text-decoration: none;
 }
