@@ -45,6 +45,8 @@ h2 {
 
 .project {
   margin-bottom: 20px;
+  white-space: nowrap;
+  overflow-x: auto;
 }
   
 .project a{
