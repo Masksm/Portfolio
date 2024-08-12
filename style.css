@@ -45,9 +45,11 @@ h2 {
 
 .project {
   margin-bottom: 20px;
+}
+  
+.project a{
   text-decoration: none;
 }
-
 form {
   display: flex;
   flex-direction: column;
