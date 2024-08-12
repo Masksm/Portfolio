@@ -1,17 +1,13 @@
-const project = document.querySelector('.project');
+document.addEventListener("DOMContentLoaded", function() {
+  const projectElement = document.querySelector('.project');
 
-function scrollRightToLeft() {
-  project.scrollBy({
-    top: 0,
-    left: -2, // Negative value to scroll to the left
-    behavior: 'smooth'
-  });
+  function scrollContent() {
+    projectElement.scrollLeft -= 1; // Move content to the left
 
-  // If reached the start, reset to the end
-  if (project.scrollLeft === 0) {
-    project.scrollLeft = project.scrollWidth;
+    if (projectElement.scrollLeft <= 0) {
+      projectElement.scrollLeft = projectElement.scrollWidth; // Reset scroll position to the far right
+    }
   }
-}
 
-// Continuously scroll every 1 seconds
-setInterval(scrollRightToLeft, 100);
+  setInterval(scrollContent, 20); // Adjust the speed of scrolling
+});
