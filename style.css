@@ -45,8 +45,10 @@ h2 {
 
 .project {
   margin-bottom: 20px;
-  white-space: nowrap;
-  overflow-x: auto;
+  padding: 8px;
+  border:2px solid grey ;
+  white-space: normal;
+  overflow-x: hidden;
 }
   
 .project a{
