@@ -71,8 +71,7 @@ h2 {
   flex: 0 0 auto; /* Prevent the project from shrinking or growing */
   width: 300px; /* Fixed width for each project */
   padding: 20px;
-  border-radius: 2px solid grey;
-  
+  border-radius: 7px solid grey;
   scroll-snap-align: start; /* Snap to the start of the project */
   background-color: #f0f0f0;
   white-space: normal; /* Allow text to wrap normally */
