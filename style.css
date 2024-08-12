@@ -43,7 +43,6 @@ h2 {
   margin-bottom: 20px;
 }
 .project {
-  display: flex;
   padding: 10px;
   background-color: #f0f0f0;
   white-space: normal; /* Allow text to wrap normally */
