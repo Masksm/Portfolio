@@ -85,23 +85,30 @@ h2 {
         gap: 20px; /* Add space between grid items */
     }
 }
-projects-container {
-  padding: 10px;
-  white-space: normal; /* Allow text to wrap normally */
-    max-height: 300px; /* Set a max height for the project card */
-    overflow-y: auto;  /* Enable vertical scrolling if content overflows */
-    box-sizing: border-box; /* Ensure padding is included in the total height */
+/* Container for projects */
+.projects-container {
+    display: flex;
+    flex-direction: column; /* Stack project cards vertically */
+    gap: 20px; /* Space between project cards */
+    padding: 20px;
+}
+
+/* Style for each project card */
+.project {
+    max-height: 300px; /* Set a max height to handle overflow */
+    overflow-y: auto;  /* Enable scrolling for overflow content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    margin-bottom: 20px; /* Space between project cards */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Add ellipsis (…) if text is too long */
+    margin-bottom: 20px; /* Space between project cards */
 }
+
 .project:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-    }
+}
 .project a{
   text-decoration: none;
 }
