@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const projectsSection = document.getElementById('projects');
+
+    // Clear the content of the projects section to prevent duplicates
+    projectsSection.innerHTML = '';
+
+    // Dynamically create and append project elements
     projects.forEach(project => {
         const projectDiv = document.createElement('div');
         projectDiv.classList.add('project');
