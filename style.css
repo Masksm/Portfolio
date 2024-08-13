@@ -85,7 +85,7 @@ h2 {
         gap: 20px; /* Add space between grid items */
     }
 }
-project {
+project-container {
   padding: 10px;
   white-space: normal; /* Allow text to wrap normally */
     max-height: 300px; /* Set a max height for the project card */
