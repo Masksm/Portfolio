@@ -40,3 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
         projectsSection.appendChild(projectDiv);
     });
 });
+// Initially display all projects
+    displayProjects('all');
+
+    // Add event listeners to filter buttons
+    document.querySelectorAll('.filter-buttons button').forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            displayProjects(filter);
+        });
+    });
+});
