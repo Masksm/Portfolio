@@ -7,24 +7,16 @@
     <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <h1>Weather App</h1>
+    <h1>Weather in Your Area</h1>
     
-    <div>
-        <label for="country-select">Select Country:</label>
-        <select id="country-select">
-            <option value="" disabled selected>Select Country</option>
-        </select>
-    </div>
-
-    <div>
-        <label for="city-select">Select City:</label>
-        <select id="city-select" disabled>
-            <option value="" disabled selected>Select City</option>
-        </select>
-    </div>
+    <button id="location-button">Get Weather</button>
 
     <div id="weather-info">
-        <!-- Weather information will be displayed here -->
+        <!-- Weather information for current location will be displayed here -->
+    </div>
+
+    <div id="nearby-weather">
+        <!-- Weather information for nearby locations will be displayed here -->
     </div>
 
     <script src="weather.js"></script>
