@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: 'To-Do List App',
             description: 'A simple React-based To-Do List application where users can add tasks, mark them as complete, and manage their daily activities.',
-            tech: 'React.js, JavaScript, CSS',
+            tech: 'React.js',
             link: 'todo_list.html'
         },
         {
@@ -15,32 +15,35 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: 'Weather App',
             description: 'A weather forecast application that fetches data from a weather API and displays the forecast for different locations.',
-            tech: 'JavaScript, API Integration, Bootstrap',
+            tech: 'JavaScript',
             link: 'weather_app.html'
         }
     ];
 
-    const projectsSection = document.getElementById('projects');
+    const projectsContainer = document.querySelector('.projects-container');
 
-    // Clear the content of the projects section to prevent duplicates
-    projectsSection.innerHTML = '';
+    // Function to display projects
+    function displayProjects(filter) {
+        projectsContainer.innerHTML = ''; // Clear existing content
+        projects.forEach(project => {
+            // Check if project matches the filter
+            if (filter === 'all' || project.tech.includes(filter)) {
+                const projectDiv = document.createElement('div');
+                projectDiv.classList.add('project');
+                projectDiv.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <ul>
+                        <li>Technologies Used: ${project.tech}</li>
+                    </ul>
+                    <a href="${project.link}">View Project</a>
+                `;
+                projectsContainer.appendChild(projectDiv);
+            }
+        });
+    }
 
-    // Dynamically create and append project elements
-    projects.forEach(project => {
-        const projectDiv = document.createElement('div');
-        projectDiv.classList.add('project');
-        projectDiv.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <ul>
-                <li>Technologies Used: ${project.tech}</li>
-            </ul>
-            <a href="${project.link}">View Project</a>
-        `;
-        projectsSection.appendChild(projectDiv);
-    });
-});
-// Initially display all projects
+    // Initially display all projects
     displayProjects('all');
 
     // Add event listeners to filter buttons
