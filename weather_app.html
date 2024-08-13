@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <div class="weather-container">
-        <h1>Weather App</h1>
-        <form id="weather-form">
-            <input type="text" id="city-input" placeholder="Enter city" required>
-            <button type="submit">Get Weather</button>
-        </form>
-        <div id="weather-info">
-            <!-- Weather information will be displayed here -->
-        </div>
+    <h1>Weather App</h1>
+    
+    <div>
+        <label for="country-select">Select Country:</label>
+        <select id="country-select">
+            <option value="" disabled selected>Select Country</option>
+        </select>
     </div>
-    <script src="weather.js"></script>
+
+    <div>
+        <label for="city-select">Select City:</label>
+        <select id="city-select" disabled>
+            <option value="" disabled selected>Select City</option>
+        </select>
+    </div>
+
+    <div id="weather-info">
+        <!-- Weather information will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
