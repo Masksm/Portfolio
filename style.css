@@ -1,6 +1,19 @@
 html {
     scroll-behavior: smooth;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.project {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
 .filter-buttons {
     text-align: center;
     margin-bottom: 20px;
