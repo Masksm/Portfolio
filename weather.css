@@ -13,65 +13,33 @@ h1 {
     margin-bottom: 20px;
 }
 
-label {
-    font-weight: bold;
-}
-
-select {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
+button {
     display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-#weather-info {
+#weather-info, #nearby-weather {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.location-weather {
     margin-top: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.location-weather h3 {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+#status-message {
+    font-size: 1.2em;
+    margin: 10px 0;
     text-align: center;
-}
-
-#weather-info h2 {
-    margin-top: 0;
-}
-
-#weather-info p {
-    margin: 5px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    select {
-        width: 100%;
-    }
-
-    #weather-info {
-        width: 100%;
-        padding: 10px;
-    }
-}
-#weather-info {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
