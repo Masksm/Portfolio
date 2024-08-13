@@ -13,6 +13,7 @@ html {
 .project {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .filter-buttons {
     text-align: center;
@@ -105,6 +106,10 @@ h2 {
         overflow: hidden; /* Hide overflowed text */
     text-overflow: ellipsis; /* Add ellipsis (…) if text is too long */
   }
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    }
 .project a{
   text-decoration: none;
 }
