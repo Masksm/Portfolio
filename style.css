@@ -94,21 +94,19 @@ h2 {
     }
 }
 .project {
-  padding: 10px;
-  white-space: normal; /* Allow text to wrap normally */
-    max-height: 300px; /* Set a max height for the project card */
-    overflow-y: auto;  /* Enable vertical scrolling if content overflows */
-    box-sizing: border-box; /* Ensure padding is included in the total height */
+    max-height: 300px; /* Ensure height is set */
+    overflow-y: auto;  /* Enable scrolling for overflowed content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    margin-bottom: 20px; /* Space between project cards */
+    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Add ellipsis (…) if text is too long */
-  }
+}
+
 .project:hover {
     transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
     }
 .project a{
   text-decoration: none;
