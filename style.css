@@ -93,19 +93,19 @@ h2 {
         gap: 30px; /* Increase gap for larger screens */
     }
 }
-.project {
-    max-height: 300px; /* Ensure height is set */
-    overflow-y: auto;  /* Enable scrolling for overflowed content */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px;
+project {
+  padding: 10px;
+  white-space: normal; /* Allow text to wrap normally */
+    max-height: 300px; /* Set a max height for the project card */
+    overflow-y: auto;  /* Enable vertical scrolling if content overflows */
+    box-sizing: border-box; /* Ensure padding is included in the total height */
     background-color: #f0f0f0;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between project cards */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    white-space:normal;
-    box-sizing:border-box;
+        overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Add ellipsis (…) if text is too long */
 }
-
 .project:hover {
     transform: scale(1.05); /* Slightly enlarge the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
